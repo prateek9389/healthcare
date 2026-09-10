@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #2563eb;
+  --color-brand-green: #10b981;
+  --color-brand-purple: #8b5cf6;
+  --color-brand-orange: #f59e0b;
+  --color-brand-teal: #14b8a6;
+  --color-brand-red: #ef4444;
+
+  --color-bg-main: #0B1120; /* Deep blue/black background */
+  --color-bg-card: #151C2C; /* Slightly lighter for cards */
+  --color-bg-hover: #1E293B;
+  
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-main: var(--bg-main);
+  --color-card: var(--bg-card);
+  --color-foreground: var(--text-main);
+  --color-muted: var(--text-muted);
+  --color-border-main: var(--border-main);
+}
+
+:root {
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border-main: #E2E8F0;
+  
+  --background: var(--bg-main);
+  --foreground: var(--text-main);
+  --card-bg: var(--bg-card);
+  --border-color: var(--border-main);
+}
+
+.dark {
+  --bg-main: #0B1120;
+  --bg-card: #151C2C;
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --border-main: rgba(255, 255, 255, 0.05);
+  
+  --background: var(--bg-main);
+  --foreground: var(--text-main);
+  --card-bg: var(--bg-card);
+  --border-color: var(--border-main);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
